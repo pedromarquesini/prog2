@@ -1,13 +1,24 @@
-Este é um programa de gerenciamento de banco escrito em linguagem C. Ele permite a realização de quatro operações básicas: cadastro de cliente, depósito, saque e exclusão de cliente. Além disso, ele também possui uma função de busca para encontrar a conta de um cliente específico com base no seu ID.
+Este é um programa de gerenciamento de banco escrito em linguagem C. Ele permite a realização de quatro operações básicas: cadastro de cliente, depósito, saque
+e exclusão de cliente. Além disso, ele também possui uma função de busca para encontrar a conta de um cliente específico com base no seu ID.
 
-O programa começa com a definição de uma estrutura chamada tConta, que representa uma conta bancária. Ela contém vários campos, como ID, nome, CPF, data de nascimento, endereço, número de celular, endereço de e-mail e saldo.
+O programa começa com a definição de uma estrutura chamada tConta, que representa uma conta bancária. Ela contém vários campos, como ID, nome, CPF,
+data denascimento, endereço, número de celular, endereço de e-mail e saldo.
 
-Em seguida, há uma série de funções definidas para realizar operações específicas. A primeira função CadastrarCliente é responsável por criar um novo registro de cliente com base nas informações inseridas pelo usuário. A segunda função RemoverCliente é usada para excluir um cliente do sistema, e ela zera todos os valores do cliente, exceto o ID.
+Em seguida, há uma série de funções definidas para realizar operações específicas. A primeira função CadastrarCliente é responsável por criar um novo registro
+de cliente com base nas informações inseridas pelo usuário. A segunda função RemoverCliente é usada para excluir um cliente do sistema, e ela zera todos os
+valores do cliente, exceto o ID.
 
-A função ImprimirMenu exibe o menu de opções para o usuário, e a função ProcuraConta é usada para encontrar a posição de um cliente no array clientes com base no seu ID.
+A função ImprimirMenu exibe o menu de opções para o usuário, e a função ProcuraConta é usada para encontrar a posição de um cliente no array clientes com base
+no seu ID.
 
-O programa principal começa com a declaração de um array de 100 clientes e uma variável i que é usada para acompanhar o número de clientes existentes. Em seguida, um loop é iniciado que continua até que o usuário selecione a opção "Sair" no menu.
+O programa principal começa com a declaração de um array de 100 clientes e uma variável i que é usada para acompanhar o número de clientes existentes.
+Em seguida, um loop é iniciado que continua até que o usuário selecione a opção "Sair" no menu.
 
-Dentro do loop, o programa verifica qual opção foi selecionada pelo usuário e executa a função apropriada. Se a opção "Cadastro de Cliente" for selecionada, a função CadastrarCliente é chamada para criar uma nova conta. Se a opção "Depósito" for selecionada, o programa solicita o ID da conta e o valor a ser depositado, e então adiciona o valor ao saldo correspondente. Se a opção "Saque" for selecionada, o programa solicita o ID da conta e o valor a ser sacado, e verifica se há saldo suficiente na conta para realizar a operação. Se houver saldo suficiente, o valor é deduzido do saldo da conta. Se a opção "Excluir Cliente" for selecionada, o programa solicita o ID da conta e chama a função RemoverCliente para excluir o cliente correspondente.
+Dentro do loop, o programa verifica qual opção foi selecionada pelo usuário e executa a função apropriada. Se a opção "Cadastro de Cliente" for selecionada,
+a função CadastrarCliente é chamada para criar uma nova conta. Se a opção "Depósito" for selecionada, o programa solicita o ID da conta e o valor a ser
+depositado, e então adiciona o valor ao saldo correspondente. Se a opção "Saque" for selecionada, o programa solicita o ID da conta e o valor a ser sacado,
+e verifica se há saldo suficiente na conta para realizar a operação. Se houver saldo suficiente, o valor é deduzido do saldo da conta.
+Se a opção "Excluir Cliente" for selecionada, o programa solicita o ID da conta e chama a função RemoverCliente para excluir o cliente correspondente.
 
-Ao final do programa, ele exibe a mensagem "Finalizando o Programa" e sai do loop. O programa termina com a instrução return 0, indicando que a execução foi bem-sucedida.
+Ao final do programa, ele exibe a mensagem "Finalizando o Programa" e sai do loop. O programa termina com a instrução return 0, indicando que a execução foi
+bem-sucedida.
