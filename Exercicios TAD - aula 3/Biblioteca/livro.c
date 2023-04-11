@@ -1,4 +1,5 @@
 #include"livro.h"
+#include "biblioteca.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -20,7 +21,7 @@ tLivro CriarLivro(int id){
   
   return livro;  
 }
-tLivro RemoverLivroEOrdenar(tBiblioteca b, int id){
+tLivro RemoverLivro(tBiblioteca b, int id){
   int i;
   for(i=0;i<b.qtd_livros;i++){
     if(b.livros[i].id==id){
@@ -108,11 +109,4 @@ tLivro DevolverLivro(tLivro livro){
   
   return livro;
 }
-
-
-
-
-
-
-
 

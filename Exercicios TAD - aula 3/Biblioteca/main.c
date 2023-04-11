@@ -17,7 +17,7 @@ int main(void) {
         pos++;
       break;
       case 2:
-        //EXIBIR LIVROS
+        //REMOVER LIVROS
         
       break;
       case 3:
@@ -45,7 +45,7 @@ int main(void) {
       break;
       case 6:
         //IMPRIMIR TODOS OS LIVROS
-
+        ImprimirBiblioteca(biblioteca);
       break;      
       default:
         //SAIR
