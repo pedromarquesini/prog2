@@ -32,7 +32,11 @@ void BuscarImprimirTitulo(tLivro b[1000]){
   //imprimir livro
 }
 tLivro ImprimirLivro();
-tLivro EmprestarLivro();
+tLivro EmprestarLivro(){
+  tLivro livro;
+  livro.disponibilidade=0;
+  return livro;
+}
 tLivro DevolverLivro();
 
 
