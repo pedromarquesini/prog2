@@ -2,6 +2,7 @@
 #include "biblioteca.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 tLivro CriarLivro(int id){
   tLivro livro;
@@ -16,15 +17,46 @@ tLivro CriarLivro(int id){
   printf("\nAno de publicação: ");
   fflush(stdin);
   scanf("%d",&livro.ano_publicacao);
-  livro.disponibilidade=1;
-  
+  livro.disponibilidade=1;//1=disponivel 0=emprestado
   
   return livro;  
 }
-tLivro RemoverLivro(tBiblioteca b, int id){
-  int i;
+
+int BuscaPosicaoID(int id, tBiblioteca b){
+  int i,pos;
   for(i=0;i<b.qtd_livros;i++){
     if(b.livros[i].id==id){
+      return i;//retorna a posicao do livro no array
+    }
+  }
+}
+
+int BuscaPosicaoTitulo(tBiblioteca b,char titulo[50]){
+  int i,pos;
+  for(i=0;i<b.qtd_livros;i++){
+    if(strcmp(b.livros[i].titulo,titulo)==0){
+      return i;//retorna a posicao do livro no array
+    }
+  }
+}
+
+tLivro RemoverLivro(tBiblioteca b){
+  int i,id,opcao;
+  char titulo[50];
+  //perguntar se é por titulo ou por id
+  printf("\nDeseja remover por titulo ou por id?\n 1-Titulo\n 2-ID: ");
+  scanf("%d",&opcao);
+  if(opcao==1){
+    printf("Qual o titulo do livro que deseja remover? ");
+    scanf("%s",&titulo);
+  }else{
+    printf("Qual o id do livro que deseja remover? ");
+    scanf("%d",&id);
+  }
+
+  //remover o livro
+  for(i=0;i<b.qtd_livros;i++){
+    if(b.livros[i].id==id || strcmp(b.livros[i].titulo,titulo)==0){//strcmp compara duas strings e retorna 0 se forem iguais
       b.livros[i].id=0;
       b.livros[i].titulo[0]='\0';
       b.livros[i].autor[0]='\0';

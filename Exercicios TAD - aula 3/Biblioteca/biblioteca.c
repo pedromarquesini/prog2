@@ -29,3 +29,13 @@ tBiblioteca ImprimirBiblioteca(tBiblioteca biblioteca){
   } 
   
 }
+
+tBiblioteca InicializarBiblioteca(tBiblioteca biblioteca){
+  biblioteca.tamanho=0;
+  return biblioteca;
+}
+
+tBiblioteca AumentarTamanho(tBiblioteca biblioteca){
+  biblioteca.tamanho++;
+  return biblioteca;
+}
