@@ -9,13 +9,16 @@ typedef struct {
     int id;
 }tLivro;
 
-tLivro CriarLivro();
-tLivro RemoverLivro();
-void BuscarImprimirId();
-void BuscarImprimirTitulo();
-tLivro ImprimirLivro();
-tLivro EmprestarLivro();
-tLivro DevolverLivro();
+tLivro CriarLivro(int id);
+tLivro RemoverLivro(tBiblioteca b);
+void BuscarImprimirId(tLivro b[1000]);
+void BuscarImprimirTitulo(tLivro b[1000]);
+tLivro ImprimirLivro(tLivro livro)
+tLivro EmprestarLivro(tLivro livro);
+tLivro DevolverLivro(tLivro livro);
+int BuscaPosicaoID(int id, tBiblioteca b);
+int BuscaPosicaoTitulo(char titulo[50], tBiblioteca b);
+
 
 
 #endif

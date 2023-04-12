@@ -7,11 +7,12 @@
 
 typedef struct Biblioteca{
   tLivro livros[MAX_LIVROS];
-  int tamanho;
+  int qtdLivros;
 }tBiblioteca;
 
 int ImprimirMenu();
-tBiblioteca AumentarTamanho();
+tBiblioteca AumentarTamanho(tBiblioteca biblioteca);
+tBiblioteca InicializarBiblioteca(tBiblioteca biblioteca);
 tBiblioteca ImprimirBiblioteca();
 
 #endif

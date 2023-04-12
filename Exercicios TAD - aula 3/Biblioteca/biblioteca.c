@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "livro.h"
 #include "biblioteca.h"
 
 int ImprimirMenu(){
@@ -15,4 +16,26 @@ int ImprimirMenu(){
   scanf("%d",&opcao);
 
   return opcao;
+}
+
+tBiblioteca ImprimirBiblioteca(tBiblioteca biblioteca){
+  //imprimir a quantidade de livros com id maiores que 0
+  int i;
+  for(i=0;i<MAX_LIVROS;i++){
+    if(biblioteca.livros[i].id>0){
+      //imprimir livro
+      ImprimirLivro(biblioteca.livros[i]);
+    }
+  } 
+  
+}
+
+tBiblioteca InicializarBiblioteca(tBiblioteca biblioteca){
+  biblioteca.tamanho=0;
+  return biblioteca;
+}
+
+tBiblioteca AumentarTamanho(tBiblioteca biblioteca){
+  biblioteca.tamanho++;
+  return biblioteca;
 }

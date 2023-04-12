@@ -4,7 +4,7 @@
 
 int main(void) {
   tLivro biblioteca[1000];
-  int id=1, opcao=0,pos=0;
+  int id=1, opcao=0,pos=0,aux=0;
 
   opcao=ImprimirMenu();
 
@@ -17,8 +17,8 @@ int main(void) {
         pos++;
       break;
       case 2:
-        //EXIBIR LIVROS
-        
+        //REMOVER LIVROS
+        biblioteca=RemoverLivro(biblioteca);
       break;
       case 3:
         //BUSCAR LIVRO
@@ -36,16 +36,26 @@ int main(void) {
           } break;
       break;
       case 4:
-        //EMPRESTAR LIVRO
-        
+        //EMPRESTAR LIVRO PELO TITULO
+        printf("Digite o titulo do livro que deseja emprestar: ");
+        char titulo[100];        
+        scanf("%s",titulo);
+        aux=buscarLivroTitulo(biblioteca,titulo);
+        livro[aux]=EmprestarLivro(livro[aux]);
+
       break;
       case 5:
-        //DEVOLVER LIVRO
+        //DEVOLVER LIVRO PELO TITULO
+        printf("Digite o titulo do livro que deseja devolver: ");
+        char titulo[100];
+        scanf("%s",titulo);
+        aux=buscarLivroTitulo(biblioteca,titulo);
+        livro[aux]=DevolverLivro(livro[aux]);
         
       break;
       case 6:
         //IMPRIMIR TODOS OS LIVROS
-
+        ImprimirBiblioteca(biblioteca);
       break;      
       default:
         //SAIR
