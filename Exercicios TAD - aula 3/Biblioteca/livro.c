@@ -1,4 +1,5 @@
 #include"livro.h"
+#include"biblioteca.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -31,9 +32,27 @@ void BuscarImprimirTitulo(tLivro b[1000]){
   //rodar o array comparando o titulo lido com o do livro
   //imprimir livro
 }
-tLivro ImprimirLivro();
-tLivro EmprestarLivro();
-tLivro DevolverLivro();
+tLivro ImprimirLivro(tLivro livro){ 
+  printf("\nTitulo: %s",livro.titulo);
+  printf("\nAutor: %s",livro.autor);
+  printf("\nAno de publicação: %d",livro.ano_publicacao);
+  printf("\nDisponibilidade: %d",livro.disponibilidade);
+  printf("\nId: %d",livro.id);
+  return livro;
+
+}
+tLivro EmprestarLivro(tLivro livro){
+  if(livro.disponibilidade==1){
+    livro.disponibilidade=0;
+    printf("Livro emprestado com sucesso!");
+  }else{
+    printf("Livro indisponível para empréstimo!");
+  }
+  return livro;
+}
+tLivro DevolverLivro(){
+
+}
 
 
 
