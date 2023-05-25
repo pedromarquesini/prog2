@@ -1,0 +1,25 @@
+O Programa começa exibindo o menu
+    -pre-cadastro de paciente
+    -iniciar um atendimento
+        -caso o usuario nao esteja cadastrado, ele deve retornar ao menu
+        -cadastrar dados clinicos
+        -cadastrar lesoes
+        -imprimir log do atendimento
+    -buscar paciente   
+        -buscar o paciente
+        -imprimir um arquivo com todos os dados do paciente
+            -dados pessoais
+            -dados clinicos
+            -lesoes
+    -Gerar relatorio
+        -abrir arquivo
+        -rodar todo o ponteiro imprimindo
+        -fechar arquivo
+    -Finalizar o Programa  
+        -liberar o ponteiro de lesao
+        -liberar os arrays de ponteiro
+        -liberar o ponteiro de ponteiro
+
+struct relatorio
+    -
+
