@@ -1,0 +1,48 @@
+entrada_1
+
+	contem: cadastro de 1 paciente, seu atendimento, sua busca, gera relatorio e termina o programa
+
+entrada_2
+
+	contem: cadastro de +1 paciente, seus atendimentos, busca de 1 deles, gera relatorio e termina o programa
+
+entrada_3
+
+	contem: cadastro de 1 paciente (com letras minusculas), seu atendimento (sem lesao), busca, gera relatorio e termina o programa
+
+
+----------------  MODELO DE TESTES: ------------------
+
+// Cadastro de paciente
+
+P
+nome_paciente 	(ate 100 letras)
+cartao_sus		(000-0000-0000-0000)
+data_nasc		(dd/mm/aaaa)
+telefone		((00)00000-0000)
+genero 			(masculino, feminino, outros)
+
+
+// Atendimento / Consulta
+
+A
+cartao			(000-0000-0000-0000)
+Diabetes		(SIM/NAO)
+Fumante			(SIM/NAO)
+AlergiaMedic		(SIM/NAO) - Se SIM (NOME DO MEDICAMENTO	)
+HistCancer		(SIM/NAO)
+TipoDePele		(I, II, III, IV, V, VI)
+
+Lesão ->
+	Rotulo		(id)
+	Diagn clínico	(Carcinoma Basocelular, Carcinoma Espinocelular, Melanoma, Ceratose Actínica, Nevo e Ceratose Seborréica)
+	Região Corpo	(Face, Orelha, Couro cabeludo, Peitoral, Dorso, Abdome,  Braço, Antebraço, Mão, Coxa, Canela e Pé)
+	Tamanho		(numero)
+	Cirurgia	(SIM/NAO)
+	Crioterapia	(SIM/NAO)
+
+
+// Busca do paciente
+
+B
+cartao			(000-0000-0000)
