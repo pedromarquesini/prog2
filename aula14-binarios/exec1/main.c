@@ -26,11 +26,11 @@ Pessoa lePessoa(Pessoa *p,FILE *arquivo){
 int main(){
     FILE *arquivo;
     Pessoa p[3];
-    p[0]=InicializaPessoa("Joao","01/01/2000","12345678910",p[1]);
+    p[0]=InicializaPessoa("Pedro","14/10/2000","06048125585",p[1]);
     p[1]=InicializaPessoa("Maria","02/02/2000","12345678911",p[2]);
     p[2]=InicializaPessoa("Jose","03/03/2000","12345678912",p[3]);
 
-    arquivo = fopen("pessoas.bin", "ab"); //abrir pra escrita binaria
+    arquivo = fopen("pessoas.bin", "wb"); //abrir pra escrita binaria
     if(arquivo == NULL){
         printf("Erro ao abrir o arquivo\n");
         exit(1);
